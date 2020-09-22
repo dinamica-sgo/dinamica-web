@@ -1,0 +1,27 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <div fxFlex="25"></div>
+       
+    <div fxFlex="50">
+        <div fxLayout="column" fxLayoutAlign="space-evenly strech" fxLayoutGap="20px"> 
+        <h3>Cuanto dinero queres retirar?</h3>
+        <mat-card> 
+            <br>
+            <form class="example-form" >
+              <div  fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+              <mat-form-field class="example-full-width">
+                <mat-label></mat-label>
+                <input matInput type="number" class="example-right-align">
+                <span matPrefix>$&nbsp;</span>
+                <span matSuffix>.00</span>
+              </mat-form-field>
+              
+              <h3 color="primary">El monto minimo de retiro es $50</h3>                
+            </div>
+          </form>
+                 
+        </mat-card>
+        <button mat-raised-button color="primary">Continuar</button>
+        </div>
+    </div>
+      <div fxFlex="25"></div>
+</div>

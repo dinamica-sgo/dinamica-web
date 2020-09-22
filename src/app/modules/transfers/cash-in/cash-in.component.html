@@ -1,0 +1,56 @@
+<div fxLayout="column" fxLayoutAlign="none center" fxLayoutGap="20px">
+  <div fxLayout="column" fxLayoutAlign="space-evenly strech" fxLayoutGap="20px"> 
+    <h3>Elegi la forma en queres ingresar el dinero</h3>
+    <form class="example-form" >
+        <mat-card> 
+          <div fxLayout="row" fxLayoutAlign="none center" >              
+              <button mat-button routerLinkActive="list-item-active" routerLink="/ingresar-dinero-monto" color="primary" aria-label="Example" fxFlex="100">
+                  <mat-icon fxFlex="10">credit_card</mat-icon>
+                  <span fxFlex="80">Visa finalizada en 2832</span>
+                  <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+              </button> 
+          </div>
+          <br>
+          <mat-divider></mat-divider>
+          <br>
+          <div fxLayout="row" fxLayoutAlign="none center" >              
+              <button mat-button routerLinkActive="list-item-active" routerLink="/ingresar-dinero-monto" color="primary" aria-label="Example" fxFlex="100">
+                  <mat-icon fxFlex="10">credit_card</mat-icon>
+                  <span fxFlex="80">Amex finalizada en 7552</span>
+                  <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+              </button> 
+          </div>
+          <br>
+          <mat-divider></mat-divider>
+          <br>
+          <div fxLayout="row" fxLayoutAlign="none center" >              
+              <button mat-button routerLinkActive="list-item-active" routerLink="/venta-codigo" color="primary" aria-label="Example" fxFlex="100">                 
+                  <span fxFlex="90">Agregar otra tarjeta</span>
+                  <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+              </button>                
+          </div>                       
+      </mat-card>
+      <br>
+      <h3>Otros medios</h3>
+      <mat-card> 
+        <div fxLayout="row" fxLayoutAlign="none center" >              
+            <button mat-button routerLinkActive="list-item-active" routerLink="/ingresar-dinero-rapi" color="primary" aria-label="Example" fxFlex="100">
+                <mat-icon fxFlex="10">payments</mat-icon>
+                <span fxFlex="80">Efectivo</span>
+                <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+            </button> 
+        </div>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="none center" >              
+            <button mat-button routerLinkActive="list-item-active" routerLink="/ingresar-dinero-banco" color="primary" aria-label="Example" fxFlex="100">
+                <mat-icon fxFlex="10">account_balance</mat-icon>
+                <span fxFlex="80" fxAlign="start">Transferencia bancaria</span>
+                <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+            </button> 
+        </div>            
+    </mat-card>
+  </form>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px" class="stats-cards">
+    <div fxFlex="25"></div>
+       
+    <div fxFlex="50">
+        <div fxLayout="column" fxLayoutAlign="space-evenly strech" fxLayoutGap="20px"> 
+        <h3>Cuanto dinero queres ingresar?</h3>
+        <mat-card> 
+            <br>
+            <form class="example-form" >
+              <div  fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+              <mat-form-field class="example-full-width">
+                <mat-label>Amount</mat-label>
+                <input matInput type="number" class="example-right-align">
+                <span matPrefix>$&nbsp;</span>
+                <span matSuffix>.00</span>
+              </mat-form-field>
+              <br>
+              <div fxLayout="row" fxLayoutAlign="space-evenly strech" fxLayoutGap="20px">
+                <button mat-raised-button>$ 500</button>
+                <button mat-raised-button>$ 1000</button>
+                <button mat-raised-button>$ 2000</button>
+                <button mat-raised-button>$ 4000</button>
+                <button mat-raised-button>$ 5000</button>
+              </div>                             
+            </div>
+          </form>                
+        </mat-card>
+        <button mat-raised-button color="primary">Continuar</button>
+        </div>
+    </div>
+      <div fxFlex="25"></div>
+</div>

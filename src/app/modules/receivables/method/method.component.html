@@ -1,0 +1,44 @@
+<div fxLayout="column" fxLayoutAlign="none center" fxLayoutGap="20px">
+
+    <h3>Selecciona el metodo de pago</h3>
+    <mat-card style="min-width: 40%;"> 
+        <br>
+        <div fxLayout="row" fxLayoutAlign="none center" >              
+            <button mat-button routerLinkActive="list-item-active" routerLink="/venta/qr" color="primary" aria-label="Example" fxFlex="100">
+                <mat-icon fxFlex="10">qr_code</mat-icon>
+                <span fxFlex="80">Pagar con codigo QR</span>
+                <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+            </button> 
+        </div>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="none center" >              
+            <button mat-button routerLinkActive="list-item-active" routerLink="/venta/link" color="primary" aria-label="Example" fxFlex="100">
+                <mat-icon fxFlex="10">link</mat-icon>
+                <span fxFlex="80">Enviar link de pago</span>
+                <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+            </button> 
+        </div>
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="none center" >              
+            <button mat-button routerLinkActive="list-item-active" routerLink="/venta/SMS" color="primary" aria-label="Example" fxFlex="100">
+                <mat-icon fxFlex="10">developer_mode</mat-icon>
+                <span fxFlex="80">Enviar codigo de validacion</span>
+                <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+            </button>                
+        </div>                       
+        <br>
+        <mat-divider></mat-divider>
+        <br>
+        <div fxLayout="row" fxLayoutAlign="none center" >              
+            <button mat-button routerLinkActive="list-item-active" routerLink="/venta/tradicional" color="primary" aria-label="Example" fxFlex="100">
+                <mat-icon fxFlex="10">phone</mat-icon>
+                <span fxFlex="80">Autorizacion telefonica</span>
+                <mat-icon fxFlex="10" fxAlingn="end">keyboard_arrow_right</mat-icon>
+            </button>                
+        </div>                       
+    </mat-card>
+</div>
