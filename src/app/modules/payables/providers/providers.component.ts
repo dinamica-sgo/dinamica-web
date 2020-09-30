@@ -14,7 +14,7 @@ export class ProvidersComponent implements OnInit {
 
   providers: Company[] = [];
   dataSource = new MatTableDataSource<Company>(this.providers);
-  displayedColumns: string[] = ['companyId', 'companyCode', 'firstName'];
+  displayedColumns: string[] = ['companyId', 'companyCode', 'firstName', 'actions'];
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   

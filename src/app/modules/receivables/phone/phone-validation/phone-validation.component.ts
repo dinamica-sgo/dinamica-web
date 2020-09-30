@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PhoneValidationComponent implements OnInit {
 
+  amount: number = 12000;
+  customer: string = "Enrique Sisack";
+  
   constructor() { }
 
   ngOnInit(): void {

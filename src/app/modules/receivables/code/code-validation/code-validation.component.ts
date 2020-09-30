@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CodeValidationComponent implements OnInit {
 
+  amount: number = 12000;
+  customer: string = "Enrique Sisack";
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  
 }

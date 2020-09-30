@@ -8,6 +8,7 @@ import { VendorsComponent } from './vendors/vendors.component';
 import { PaymentsMethodComponent } from './method/method.component';
 import { DebitsComponent } from './debits/debits.component';
 import { RouterModule } from '@angular/router';
+import { ProviderPaymentComponent } from './providers/provider-payment/provider-payment.component';
 
 
 
@@ -15,7 +16,7 @@ import { RouterModule } from '@angular/router';
   declarations: [
     ProvidersComponent, 
     VendorsComponent, 
-    PaymentsMethodComponent, DebitsComponent
+    PaymentsMethodComponent, DebitsComponent, ProviderPaymentComponent
   ],
   imports: [
     CommonModule,

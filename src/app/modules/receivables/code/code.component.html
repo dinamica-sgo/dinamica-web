@@ -1,7 +1,9 @@
 <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="20px">
     <h3>Ingresa el importe de la venta</h3>
     <mat-card>
-
+        <mat-toolbar>
+            <span>Datos de la transaccion</span>
+          </mat-toolbar>
         <form [formGroup]="casesForm" (ngSubmit)="onFormSubmit()" class="example-form" style="text-align: center;">
             <br>
             <mat-form-field class="example-full-width">
@@ -31,12 +33,13 @@
                 </mat-form-field>
             </ng-container>
             <br>
+            <br>
             <mat-divider></mat-divider>
             <br>
             <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20">
-                <button (click)="onVerify()" mat-raised-button >Verificar</button>
+                <button (click)="onVerify()" mat-stroked-button fxFlex=40 color="warn">Verificar</button>
                 <button mat-raised-button routerLinkActive="list-item-active" routerLink="/venta/SMS/validacion"
-                    color="primary" [disabled]="!verify">Autorizar</button>
+                    color="primary" [disabled]="!verify" fxFlex=40>Autorizar</button>
             </div>
             <br>
         </form>

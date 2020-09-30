@@ -1,1 +1,28 @@
-<p>phone-validation works!</p>
+<div fxLayout="column" fxLayoutAlign="none center" fxLayoutGap="20px">
+    <div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="20px">
+        <mat-card>
+            <br>
+            <form class="example-form">
+                <div fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+                    <h3>Ingresar el codigo de autorización</h3>
+                    <h3>{{ customer }}</h3>
+                    <p>codigo de 6 digitos provisto por Dinamica</p>
+                    <br>
+                    <br>
+                    <mat-form-field class="example-full-width example-center-align" hintLabel="6 digitos">
+                        <mat-label>label</mat-label>
+                        <input matInput #input maxlength="6" placeholder="123456">
+                        <mat-hint align="end">{{input.value?.length || 0}}/6</mat-hint>
+                    </mat-form-field>
+                    <br>
+                    <br>
+                </div>
+                <div fxLayout="column" fxLayoutAlign="space-between stretch" fxLayoutGap="20px">
+                    <button mat-raised-button color="primary" routerLink="/venta/tradicional/aprobada">Continuar</button>
+                    <button mat-stroked-button color="warn">Reenviar codigo</button>
+                </div>
+            </form>
+            <br>
+        </mat-card>
+    </div>
+</div>

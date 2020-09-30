@@ -14,11 +14,11 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'app-phone',
-  templateUrl: './phone.component.html',
-  styleUrls: ['./phone.component.scss']
+  selector: 'app-provider-payment',
+  templateUrl: './provider-payment.component.html',
+  styleUrls: ['./provider-payment.component.scss']
 })
-export class PhoneComponent implements OnInit {
+export class ProviderPaymentComponent implements OnInit {
 
   verify: boolean = false;
 
@@ -38,10 +38,10 @@ export class PhoneComponent implements OnInit {
 
   ngOnInit(): void {
     this.casesForm = this.formBuilder.group({
-      code: [null],
-      customer: ['Enrique Sisack'],
+      code: [30717717225],
+      customer: ['Telecom Personal SA'],
       amount: [null, Validators.required],
-      descrip: [null, Validators.required],
+      descrip: [null],
       quota: ['Cuotas 1 x 12.100']      
     });
   }

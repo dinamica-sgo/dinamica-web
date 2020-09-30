@@ -41,6 +41,7 @@ import { QrApprovedComponent } from './modules/receivables/qr/qr-approved/qr-app
 import { PaymentsMethodComponent } from './modules/payables/method/method.component';
 import { DebitsComponent } from './modules/payables/debits/debits.component';
 import { CompaniesComponent } from './modules/companies/companies.component';
+import { ProviderPaymentComponent } from './modules/payables/providers/provider-payment/provider-payment.component';
 
 
 const routes: Routes = [
@@ -80,6 +81,9 @@ const routes: Routes = [
     }, {
       path: 'pagar/servicios',
       component: ProvidersComponent
+    }, {
+      path: 'pagar/servicios/operacion',
+      component: ProviderPaymentComponent
     }, {
       path: 'pagar/prestadores',
       component: VendorsComponent
