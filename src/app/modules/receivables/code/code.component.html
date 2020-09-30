@@ -2,33 +2,25 @@
     <h3>Ingresa el importe de la venta</h3>
     <mat-card>
 
-        <form [formGroup]="casesForm" (ngSubmit)="onFormSubmit()" class="example-form">
+        <form [formGroup]="casesForm" (ngSubmit)="onFormSubmit()" class="example-form" style="text-align: center;">
             <br>
-            <div fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="20px">
-                <div fxLayout="row" fxLayoutAlign="none center" fxLayoutGap="20px" class="full-width">
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Tipo</mat-label>
-                        <mat-select formControlName="type">
-                            <mat-option *ngFor="let gl of typeList" [value]="gl">
-                                {{gl}}
-                            </mat-option>
-                        </mat-select>
-                    </mat-form-field>
-                    <mat-form-field class="example-full-width">
-                        <mat-label>Documento</mat-label>
-                        <input matInput type="number" placeholder="Documento" formControlName="code"
-                            [errorStateMatcher]="matcher">
-                    </mat-form-field>
-                </div>
+            <mat-form-field class="example-full-width">
+                <mat-label>Documento</mat-label>
+                <input matInput type="number" placeholder="Documento" formControlName="code"
+                    [errorStateMatcher]="matcher">
+            </mat-form-field>
+            <ng-container *ngIf="verify">
                 <mat-form-field class="example-full-width">
                     <mat-label>Cliente</mat-label>
-                    <input matInput placeholder="cliente" formControlName="customer" [errorStateMatcher]="matcher">
+                    <input matInput placeholder="cliente" formControlName="customer">
                 </mat-form-field>
-                <mat-form-field class="example-full-width">
-                    <mat-label>Monto</mat-label>
-                    <input matInput type="number" placeholder="Monto" formControlName="amount"
-                        [errorStateMatcher]="matcher">
-                </mat-form-field>
+            </ng-container>
+            <mat-form-field class="example-full-width">
+                <mat-label>Monto</mat-label>
+                <input matInput type="number" placeholder="Monto" formControlName="amount"
+                    [errorStateMatcher]="matcher">
+            </mat-form-field>
+            <ng-container *ngIf="verify">
                 <mat-form-field class="example-full-width">
                     <mat-label>Cuotas</mat-label>
                     <mat-select formControlName="quota">
@@ -37,14 +29,14 @@
                         </mat-option>
                     </mat-select>
                 </mat-form-field>
-                <br>
-                <mat-divider></mat-divider>
-                <br>
-                <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20">
-                    <button mat-raised-button>Verificar</button>
-                    <button mat-raised-button routerLinkActive="list-item-active" routerLink="/venta/SMS/validacion"
-                        color="primary">Autorizar</button>
-                </div>
+            </ng-container>
+            <br>
+            <mat-divider></mat-divider>
+            <br>
+            <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20">
+                <button (click)="onVerify()" mat-raised-button >Verificar</button>
+                <button mat-raised-button routerLinkActive="list-item-active" routerLink="/venta/SMS/validacion"
+                    color="primary" [disabled]="!verify">Autorizar</button>
             </div>
             <br>
         </form>

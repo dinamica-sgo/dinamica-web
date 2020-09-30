@@ -3,6 +3,7 @@ import { FormBuilder, FormControl, FormGroup, FormGroupDirective, NgForm, Valida
 import { Router } from '@angular/router';
 import { TransactionService } from 'src/app/services/transaction.service';
 import { ErrorStateMatcher } from '@angular/material/core';
+import { TitleCasePipe } from '@angular/common';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class MyErrorStateMatcher implements ErrorStateMatcher {
@@ -19,15 +20,17 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class CodeComponent implements OnInit {
 
+  verify: boolean = false;
+
   casesForm: FormGroup;
-  type: '';
+
   code: number = null;
   customer = '';
   amount: number = null;
   descrip = '';
   quota = '';
   typeList = ['DNI', 'CUIT'];
-  quotaList = ['2 cuotas', '3 cuotas', '6 cuotas', '12 cuotas'];
+  quotaList = ['Cuotas 1 x 12.100', 'Cuotas 2 x 6300', ' Cuotas 3 x 4500', 'Cuotas 6 x 2800', 'Cuotas 12 x 1600'];
   isLoadingResults = false;
   matcher = new MyErrorStateMatcher();
 
@@ -35,12 +38,11 @@ export class CodeComponent implements OnInit {
 
   ngOnInit(): void {
     this.casesForm = this.formBuilder.group({
-      type: [null],
       code: [null],
-      customer: [null, Validators.required],
+      customer: ['Enrique Sisack'],
       amount: [null, Validators.required],
       descrip: [null, Validators.required],
-      quota: [null, Validators.required]      
+      quota: ['Cuotas 1 x 12.100']      
     });
   }
 
@@ -58,4 +60,7 @@ export class CodeComponent implements OnInit {
     //   });
   }
 
+  onVerify() {
+    this.verify = true;
+  }
 }
